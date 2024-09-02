@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Skeleton-Aware Motion Retargeting Using Masked Pose Modeling.">
+  <meta name="keywords" content="Motion Retargeting, Masked Pose Modeling">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skeleton-Aware Motion Retargeting Using Masked Pose Modeling</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PMXG52KP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'GTM-PMXG52KP');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="http://mmlabsites.disi.unitn.it/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/mmlab-cv/">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Skeleton-Aware Motion Retargeting Using Masked Pose Modeling</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=WG3OkQ4AAAAJ&hl=it&oi=ao">Giulia Martinelli</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.it/citations?user=r8BzAfcAAAAJ&hl=en">Nicola Garau</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=I6vOrqkAAAAJ&hl=it&oi=ao">Niccolò Bisagno</a><sup>1</sup>,
+            <span class="author-block">
+              <a href="https://scholar.google.it/citations?user=mR1GK28AAAAJ&hl=en">Nicola Conci</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Trento</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://mmlab-cv.github.io/skeleton-aware-motion-retargeting/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming soon)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/mmlab-cv/skeleton-aware-motion-retargeting/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="video-container">
+    <iframe 
+      width="100%" 
+      height="400" 
+      src="https://www.youtube.com/embed/LzLTjiejlTk" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+        <p>
+          Motion retargeting aims at transferring a given motion from a source character to a target one. The task becomes increasingly challenging as the differences between the body shape and skeletal structure of input and target characters increase.
+        </p>
+        <p>
+        <b>We present a novel approach for motion retargeting between skeletons whose goal is to transfer the motion from a source skeleton to a target one in a different format</b>. Our approach works when the two skeletons differ in scale, bone length, and number of joints. Surpassing previous approaches, our method can also retarget between skeletons that differ in hierarchy and topology, such as retargeting between animals and humans. We train our method as a transformer using a random masking strategy both in time and space, aiming at reconstructing the joints of the masked input skeleton to obtain a deep representation of the motion. At testing time, our proposal can retarget the input motion to different skeletons, reconstructing the disparities between the source and the target. 
+        </p>
+        <p>
+        Our method outperforms state-of-the-art results on the Mixamo dataset, which features a high variance between skeleton formats. Moreover, we show how our approach can effectively generalize to different domains by transferring between human motion and quadrupeds, and vice-versa.
+        </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Topologies. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Topologies</h2>
+          <img src="./static/images/topologies.png"
+            alt="Topologies."/>
+            Examples of isomorphic skeletons are (a) and (b), which have the same joints but varying bone lengths. Both (a) and (b) are homeomorphic to the skeleton (c), which has a different number of joints. They are defined as homeomorphic because they can all be reduced to a common primal skeleton (d). The skeleton of a quadruped (e) is neither homeomorphic nor isomorphic to the others because the topology is changed and thus (e) cannot be reduced to the common primal skeleton.
+        </div>
+      </div>
+      <!--/ Topologies. -->
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Architecture. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Architecture</h2>
+          <img src="./static/images/architecture.png"
+            alt="Architecture."/>
+            <p> Starting with an initial animation <i>A(Q<sub>k</sub>)</i>, the process begins with a <b>tokenizer</b>, which converts each joint of the input into a series of tokens <i>E<sub>k</sub></i>. We then proceed by <b>masking</b> (indicated by black squares) a random subset of <i>E<sub>k</sub></i> tokens. The remaining unmasked tokens are concatenated to include every possible topology, forming <i>E<sup>M</sup><sub>C</sub></i>. To capture the relationships between the joints in <i>E<sup>M</sup><sub>C</sub></i>, we add a <b>spatio-temporal positional embedding</b>, represented as <i>ε<sub>N</sub> + ε<sub>W</sub></i>. This combined representation is augmented with a learnable token <i>S<sub>k</sub></i> that represents static information, and this forms the input to the <b>encoding transformer</b>. The transformer maps the masked input to a latent feature representation <i>E<sub>C</sub></i>, which contains the embedded motion with all masked joints predicted. Subsequently, a <b>decoder</b> extracts the super-skeleton motion <i>A(Q<sub>C</sub>)</i> from this latent space, using the learned token (<i>S<sub>k</sub></i> during training and <i>S<sub>t</sub></i> during testing). From this, we derive the reconstructed input motion <i>A'(S<sub>k</sub>, Q<sub>k</sub>)</i> and the retargeted motion <i>A(S<sub>t</sub>, Q<sub>t</sub>)</i>. The auto-encoder is trained to predict the masked joints by minimizing the mean squared error (MSE) loss between the original input <i>A(S<sub>k</sub>, Q<sub>k</sub>)</i> and the reconstructed output <i>A'(S<sub>k</sub>, Q<sub>k</sub>)</i>.</p>
+        </div>
+      </div>
+      <!--/ Architecture. -->
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Results. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Results</h2>
+          <img src="./static/images/iso_mesh_skel.png"
+            alt="Results."/>
+            Qualitative results for the retargeting between <b>isomorphic skeletons</b>.  The outputs are overlaid with the ground truth, represented by the green skeleton. Our results demonstrate greater stability and alignment with the ground truth. In the second row, we present the mesh visualization. Notably, our method achieves superior qualitative results even without employing any mesh collision penalizer.
+        </div>
+      </div>
+      <!--/ Results. -->
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Real-world results. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Real-world results</h2>
+          <img src="./static/images/real.png"
+            alt="Real-world results."/>
+            Our approach can retarget from real-world characters, whose motion can be modeled by a common SMPL mesh, even with challenging and unseen motion such as backflip.
+        </div>
+      </div>
+      <!--/ Real-world results. -->
+    </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>Coming soon
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the template of this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
